@@ -3,10 +3,10 @@ import urllib.request
 from bs4 import BeautifulSoup
 
 # specify the urls
-quote_page = ['https://www.airbnb.co.uk/rooms/10422593?location=Edinburgh&s=-3aifuLg',
+bnb_page = ['https://www.airbnb.co.uk/rooms/10422593?location=Edinburgh&s=-3aifuLg',
 'https://www.airbnb.co.uk/rooms/19278160?s=51', 'https://www.airbnb.co.uk/rooms/14531512?s=51']
 
-for pg in quote_page:
+for pg in bnb_page:
     # query the website and return the html to the variable 'page'
     page = urllib.request.urlopen(pg)
 
