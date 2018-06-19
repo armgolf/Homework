@@ -41,10 +41,10 @@ elif "3 baths" in soup.get_text():
 else:
     print("More than 3 bathrooms")
 
-# get list of amenitites
+# get list of amenities
 amenities = [element.text for element in soup.find_all('div', attrs={'class':'_ncwphzu'}, limit=8)]
 # tidy up list
 amenities = list(map(lambda s: s.strip(), amenities))
-# remove 1st two and last items from list (these are not amenities)
+# remove 1st two items from list (these are not amenities)
 amenities = amenities[2:]
 print("First 6 Amenities: ", amenities)
